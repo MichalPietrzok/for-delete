@@ -1,0 +1,42 @@
+.work {
+  padding-top: 125px;
+  @media(min-width: 1920px) {
+    padding-top: vw(125);
+  }
+  &-row {
+    min-height: calc(100vh - 70px - 125px);
+    @media(min-width: 1920px) {
+      min-height: calc(100vh - 3.64583vw - 6.51042vw);
+    }
+  }
+  &-figure {
+    padding: 0  15px 20px;
+    @media(min-width: 1200px) {
+      padding: 0  15px vw(20);
+    }
+    &__image {
+      max-width: 100%;
+    }
+    &__title {
+      @extend %font-20;
+      font-weight: 700;
+      line-height: 1.5;
+      margin: vw(5) 0;
+    }
+    &__content {
+      @extend %font-20;
+      font-weight: 300;
+      line-height: 1.5;
+      margin: vw(5) 0;
+    }
+  }
+  &-navigation {
+    height: 70px;
+    padding: 0 30px;
+    border-top: 1px solid $gray-color;
+    @media(min-width: 1920px) {
+      height: vw(70);
+      padding: 0 vw(30);
+    }
+  }
+}

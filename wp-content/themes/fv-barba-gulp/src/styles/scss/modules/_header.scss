@@ -1,0 +1,134 @@
+.header {
+  left: 0;
+  right: 0;
+  top: 0;
+  position: fixed;
+  z-index: 11;
+  &__bg {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 97px;
+    @media(min-width: 1200px) {
+      opacity: 0;
+      height: vw(97);
+    }
+  }
+  &__container {
+    position: relative;
+    z-index: 9;
+  }
+  &__wrapper {
+    height: vw(95);
+    min-height: 95px; 
+  }
+  &__name {
+    @extend %font-21;
+    line-height: 1.29;
+    color: $text-color;
+    transform-origin: left;
+  }
+  &__button {
+    background: none;
+    padding: 0;
+    margin:  vw(5) 0 0;
+    border: none;
+    width: vw(60);
+    min-width: 60px;
+    height: vw(60);
+    min-height: 60px;
+    &--circle {
+      border-radius: 50%;
+      padding: 17px;
+      @media(min-width: 1200px) {
+        padding: vw(17);
+      }
+    }
+    &-wrap {
+      position: relative;
+      width: vw(30);
+      min-width: 30px;
+      height: vw(22);
+      min-height: 22px;
+    }
+    &-line {
+      transform-origin: right;
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      right: 0;
+      top: 0;
+      background-color: $text-color;
+      &--second {
+        top: 50%; 
+      }
+      &--third {
+        top: 100%;
+        width: 50%;
+      }
+    }
+  }
+  &__panel {
+    position: absolute;
+    left:0;
+    right: 0;
+    background: $light-color;
+    top: 95px;
+    overflow: hidden;
+    height: 0;
+    max-height: 99vh;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    @media(min-width: 1200px) {
+      top: vw(95);
+    }
+    &-container {
+      display: none;
+    }
+    &-wrap {
+      padding: 50px 0;
+      @media(min-width: 1200px) {
+        padding-top: vw(68);
+        padding-bottom: vw(97);
+      }
+    }
+  }
+  &__info,
+  &__navigation {
+    @media(min-width: 992px) {
+      padding-left: 0;
+    }
+  }
+  &__title { 
+    @extend %font-44;
+    line-height: 1.25;   
+    color: $text-color;
+    padding-bottom: vw(30);
+    padding-top: vw(5);
+  }
+  &__text {
+    @extend %font-16;
+    line-height: 1.63;
+    color: $text-color;
+    padding-bottom: vw(24);
+    white-space: break-spaces;
+  }
+  &__list {
+    @media(min-width: 992px) {
+      padding-left: vw(40);
+    }
+    a {
+      @extend %font-33;
+      line-height: 1.61;
+      color: $text-color;
+    }
+  }
+  &__banner {
+    height: 100vh;
+  }
+}

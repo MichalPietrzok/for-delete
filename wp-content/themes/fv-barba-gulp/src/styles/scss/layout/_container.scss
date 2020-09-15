@@ -1,0 +1,70 @@
+// file for changing standard Bootstrap classes
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+.container {
+    width: 540px;
+  }
+
+}
+
+@media (min-width: 768px) {
+.container {
+    width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+.container {
+    width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+.container {
+    width: 1140px;
+    &--text {
+      min-width: 960px;
+      width: 960px;
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+.container {
+    min-width: 1200px;
+    width: vw(1250);
+    &--text {
+      min-width: 960px;
+      width: 960px;
+    }
+    &--small {
+      min-width: 0;
+      width: 50%;
+    }
+    &--medium {
+      min-width: 1300px;
+      max-width: 79%;
+      width: 79%;
+    }
+    &--big {
+      min-width: 1300px;
+      max-width: 95%;
+      width: 95%;
+    }
+  }
+}

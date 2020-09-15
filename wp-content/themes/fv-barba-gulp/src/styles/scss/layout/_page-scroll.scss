@@ -1,0 +1,26 @@
+.page-scroll {
+  width: vw(54);
+  min-width: 54px;
+  height: vw(54);
+  min-height: 54px;
+  &--footer {
+    transform: rotate(180deg);
+  }
+  &--banner {
+    z-index: 11;
+    position: absolute;
+    top: calc(100vh - 70px);
+    left: calc(50% - 27px);
+    @media(min-width: 1920px) {
+      left: calc(50% - 1.4vw);
+      top: calc(100vh - 4vw);
+    }
+  }
+  &__button {
+    background: none;
+    border: none;
+  }
+  &__image {
+    width: 100%;
+  }
+}

@@ -1,0 +1,45 @@
+.portfolio {
+  background: $light-color;
+  padding-top: 50px;
+  @media(min-width: 1200px) {
+    padding-top: vw(80);
+  }
+  &__item {
+    padding-bottom: 50px;
+    color: $text-color;
+    transition: .5s ease .1s;
+    @for $i from  1 through  6 {
+      &:nth-of-type(#{$i}) {
+        transition: .5s ease #{$i / 5}s;
+      }
+    } 
+    @media(min-width: 1200px) {
+      padding-bottom: vw(80);
+    }
+    &-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &-title {
+      @extend %font-20;
+      line-height: 1.5;
+      margin: 15px 0 5px;
+      font-weight: 700;
+      @media(min-widtH: 1920px) {
+        margin: vw(15) 0 vw(5);
+      }
+    }
+    &-text {
+      @extend %font-20;
+      font-weight: 300;
+      line-height: 1.6;
+    }
+  }
+  &.scroll--hidden {
+    .portfolio__item {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+  }
+}

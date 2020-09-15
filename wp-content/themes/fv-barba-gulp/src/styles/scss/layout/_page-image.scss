@@ -1,0 +1,26 @@
+.page-image {
+  width: 100vw;
+  &--banner {
+    position: fixed;
+    left: 0;
+    transform-origin: top;
+    top: 95px;
+    z-index: 10;
+    height: 100vh;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @media(min-width: 1200px) {
+      top: 0px;
+    }
+  }
+  &__item {
+    height: auto;
+    width: 100%;
+    display: block;
+    &--banner {
+      opacity: 0;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+body {
+  overflow-x: hidden;
+  opacity: 0;
+}
+
+body,
+a,
+p,
+button {
+  font-family: $normal-font;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $normal-font;
+  font-weight: 700;
+}
+
+button,
+a,
+video {
+	outline: none;
+    &:focus {outline:none;}
+    &::-moz-focus-inner {border:0;}
+}
+
+.link-disabled {
+  cursor: not-allowed;
+  opacity: .7;
+}
+
+.site-content {
+  opacity: 0;
+}
+.d-none  {
+  display: none;
+}
